@@ -1,0 +1,15 @@
+{
+  "T1": {
+    "template_name": "Traditional Exam",
+    "sections": [
+      {
+        "section": "A",
+        "question_type": "Long Answer",
+        "questions": 3,
+        "marks": 2,
+        "bloom": "Understand",
+        "difficulty": "Difficult"
+      }
+    ]
+  }
+}
