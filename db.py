@@ -2,20 +2,16 @@ import psycopg2
 import uuid
 
 
-# ═══════════════════════════════════════════
-# CONNECTION
-# ═══════════════════════════════════════════
+import os
+import psycopg2
 
 def get_connection():
-    return psycopg2.connect(
-        host="localhost",
-        database="qp_engine",
-        user="postgres",
-        password="qp2026",
-        port=5432
-    )
+    database_url = os.environ.get("DATABASE_URL")
 
+    if not database_url:
+        raise Exception("DATABASE_URL not set")
 
+    return psycopg2.connect(database_url, sslmode="require")
 # ═══════════════════════════════════════════
 # INIT DB
 # ═══════════════════════════════════════════
