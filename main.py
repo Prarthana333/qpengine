@@ -75,7 +75,7 @@ subject_stores: Dict[str, VectorStore] = {}
 subject_chunks: Dict[str, list] = {}
 query_generator = QueryGenerator()
 
-UPLOAD_DIR = "data/uploads"
+UPLOAD_DIR = "/tmp/uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 
